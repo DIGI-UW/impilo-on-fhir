@@ -39,6 +39,7 @@ public class BundleUtilityServiceImpl implements BundleUtilityService {
             if (entry.hasResource() && resourceType.equals(entry.getResource().getResourceType())) {
                 return Optional.of(entry.getResource());
             }
+
         }
         return Optional.empty();
     }
