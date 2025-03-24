@@ -1,1 +1,12 @@
+zw/gov/mohcc/mrs/controller/ServiceRequestController.class
+zw/gov/mohcc/mrs/art/data/Art.class
+zw/gov/mohcc/mrs/history/data/PersonMedication.class
+zw/gov/mohcc/mrs/art/data/ArtWhoStage.class
+zw/gov/mohcc/mrs/art/data/ArtAppointment.class
+zw/gov/mohcc/mrs/pharmacy/data/Dispense.class
+zw/gov/mohcc/mrs/art/data/repository/ArtAppointmentRepository.class
 zw/gov/mohcc/mrs/impilo_on_fhir/ImpiloOnFhirApplication.class
+zw/gov/mohcc/mrs/art/data/repository/ArtWhoStageRepository.class
+zw/gov/mohcc/mrs/pharmacy/data/repository/DispenseRepository.class
+zw/gov/mohcc/mrs/art/data/repository/ArtRepository.class
+zw/gov/mohcc/mrs/history/data/repository/PersonMedicationRepository.class
