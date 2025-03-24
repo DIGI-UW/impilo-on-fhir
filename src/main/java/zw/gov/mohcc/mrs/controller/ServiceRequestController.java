@@ -1,10 +1,16 @@
 package zw.gov.mohcc.mrs.controller;
 
 
-@RestController
+//@RestController
 public class ServiceRequestController {
 	
-	test
+	
+	 //@GetMapping("/patients/{id}/fhir")
+	   // public FhirPatient getPatientFhir(@PathVariable Long id) {
+	     //   return patientService.getPatientAsFhir(id);
+	   // }
+	
+	
 
 
 

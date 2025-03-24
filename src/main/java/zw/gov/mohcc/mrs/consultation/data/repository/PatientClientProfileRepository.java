@@ -1,4 +1,4 @@
-package zw.gov.mohcc.mrs.service;
+package zw.gov.mohcc.mrs.consultation.data.repository;
 
 /*-
  * ========================LICENSE_START=================================
@@ -21,11 +21,27 @@ package zw.gov.mohcc.mrs.service;
  * ========================LICENSE_END=================================
  */
 
-import java.util.Date;
+import org.springframework.data.jpa.repository.JpaRepository;
+import zw.gov.mohcc.mrs.commons.data.Identifiable;
+import zw.gov.mohcc.mrs.consultation.data.PatientClientProfile;
 
-public interface LabOnFhirPullService {
+import java.time.LocalDateTime;
+import java.util.Optional;
+import java.util.Set;
 
-    void pullUpdatedTasks();
+public interface PatientClientProfileRepository extends JpaRepository<PatientClientProfile, String> {
 
-    void pullUpdatedTasks(Date lastUpdateTime);
+	Optional<PatientClientProfile> findTopByPersonIdAndClientProfileAndDateLessThanEqualOrderByDateDesc(String personId, Identifiable clientProfile, LocalDateTime date);
+
+
+	Optional<PatientClientProfile> findTopByPersonIdAndDateLessThanEqualOrderByDateDesc(String personId, LocalDateTime timeStamp);
+	
+	boolean existsByPersonIdAndClientProfileNameIn(String personId, Set<String> clientProfiles);
+
+	boolean existsByPersonId(String personId);
+
+
+	PatientClientProfile findTopByPersonIdOrderByDateDesc(String personId);
+
+
 }
